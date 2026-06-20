@@ -4,6 +4,8 @@
 - Содержимое:
   - `CoinsLabel` (TextLabel) — позиция вверху слева
   - `LuckLabel` (TextLabel) — позиция внизу слева
+  - `RightSide` (Frame)
+    - `ShopButton` (TextButton)
 
 ### NotificationGui (ScreenGui)
 - `ResetOnSpawn = false`
