@@ -1,3 +1,6 @@
+## UI Store (ReplicatedStorage)
+ReplicatedStorage.Assets.UI - в этой папке хранятся все UI элементы для динамического названения
+
 ### HudGui (ScreenGui)
 - `ResetOnSpawn = false`
 - `IgnoreGuiInset = true` (опционально)
@@ -6,6 +9,42 @@
   - `LuckLabel` (TextLabel) — позиция внизу слева
   - `RightSide` (Frame)
     - `ShopButton` (TextButton)
+    - `IndexButton` (TextButton)
+  - `RebirthFrame` (Frame)
+    - `BottomLine` (Frame)
+      - `PetSlots` (Frame)
+        - `PetSlot` (Frame) - UI Store
+      - `RebirthButton` (ImageButton)
+        - `Lock` (Frame)
+        - `ImageLabel` (ImageLabel)
+    - `CoinAmount` (Frame)
+      - `Filler`  (Frame)
+      - `AmountLabel` (TextLabel)
+
+### IndexGui (ScreenGui)
+- `ResetOnSpawn = false`
+- Содержание:
+- `IndexFrame` (Frame)
+- `UIAspectRatioConstraint` — для поддержания соотношения сторон
+- `UICorner` — для закруглённых углов
+- `UIListLayout` — для вертикального расположения элементов
+- `UIPadding` — для отступов между элементами
+- `UIStroke` — для границ
+  - `ProgressBar` (Frame)
+  - `UICorner` — для закруглённых углов
+  - `UIStroke`
+    - `Filler` (Frame)
+    - `AmountLabel` (TextLabel)
+  - `ScrollingFrame` (ScrollingFrame)
+  - `UICorner`
+  - `UIListLayout`
+  - `UIPadding`
+    - `IndexItem` (Frame) - UI Store
+  - `UICorner`
+  - `UIGradient` — для градиентного фона
+  - `UIStroke`
+    - `IconLabel` (ImageLabel)
+      - `NameLabel` (TextLabel)
 
 ### NotificationGui (ScreenGui)
 - `ResetOnSpawn = false`
@@ -41,13 +80,13 @@
     - `TakeButton` (TextButton)
     - `ExitButton` (TextButton)
 
-### ShopGui (ScreenGui)
+### BalloonsGui (ScreenGui)
 - `Enabled = false`
-- `ShopFrame` (Frame) — центр экрана
+- `BalloonsFrame` (Frame) — центр экрана
   - `CloseButton` (TextButton) — крестик в углу
   - `TitleLabel` (TextLabel) — "Магазин шаров"
-  - `BalloonListFrame` (ScrollingFrame) — список шаров
-    - `BalloonItemTemplate` (Frame, `Visible = false`) (изначально находится в ReplicatedStorage.Assets.UI)
+  - `BalloonsListFrame` (ScrollingFrame) — список шаров
+    - `BalloonItemTemplate` (Frame, `Visible = false`) - BalloonItemTemplate из UI Store
       - `BalloonNameLabel` (TextLabel)
       - `BalloonPriceLabel` (TextLabel)
       - `BalloonRarityLabel` (TextLabel)
